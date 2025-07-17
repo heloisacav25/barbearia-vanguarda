@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- normalize Css -->
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/modernize" rel="stylesheet">
+  <!-- normalize Css -->
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/modernize" rel="stylesheet" />
 
     <!-- Minha folha de estilo -->
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia vanguarda</title>
-</head>
-<body>
-
- <section class="hero">
-     <div id="header-mask-spacer">
-      <header>
-       <h1>
-         Barbearia <span> Vanguarda </span>
-       </h1>
-      <div role="logo" class= "logo-hero" ></div>
-    
-       </header>
-             <!--role=papel/função-->
-            <div id="hero-slider" role= "mask">
-                <img src="public/5bf49a429fa3144716f1ec4955d31e2913a6abd9 (4).jpg" alt="slide-1">
-            </div>
+  </head>
+  <body>
+    <section class="hero">
+      <div id="header-mask-spacer">
+        <header>
+          <h1>Barbearia <span> Vanguarda </span></h1>
+          <div role="logo" class="logo-hero"></div>
+        </header>
+        <!--role=papel/função-->
+        <div id="hero-slider" role="mask">
+          <img
+            src="public/5bf49a429fa3144716f1ec4955d31e2913a6abd9 (4).jpg"
+            alt="slide-1"
+          />
+        </div>
       </div>
-            <p class="hero-paragraph">  Obtenha um estilo impecável, do cabelo à barba.</p>
+      <p class="hero-paragraph">
+        Obtenha um estilo impecável, do cabelo à barba.
+      </p>
+    </section>
+  </body>
+
+  <!-- ********* -->
+  <!-- SEÇÃO HERO -->
+  <!-- ********* -->
+  <section class="hero-section"></section>
+
+  <!-- ***************** -->
+  <!-- SEÇÃO A BARBEARIA -->
+  <!-- ***************** -->
+  <section class="a-barbearia-section"></section>
+
+  <!-- ************** -->
+  <!-- SEÇÃO SERVIÇOS -->
+  <!-- ************* -->
+  <section class="servicos-section justify-between itens-center">
+    <p>
+      Estilo, cuidado e exelencia <br />
+      em cada corte
+    </p>
+
+    <div class="flex justify-between">
+      <div role="mask" class="justify-center itens-center">
+        <img src="public/servicos.jpg" alt="imagem de serviços da barbearia" />
+      </div>
+
+      <article class="flex flex-col justify-around itens-center">
+        <h2>corte</h2>
+        <p>Social, degradê, surfista, militar, razor part, undercut</p>
+        <a href="#">Ver mais</a>
+      </article>
+
+    </div>
+    <div class="bolinhas fileira"></div>
+
   </section>
-</body>
 </html>

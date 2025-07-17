@@ -119,3 +119,162 @@ p {
   font-family: "source-serif-4", serif;
   opacity: 0.65;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a-barbearia-section {
+
+& [role-mask] {
+width: 420px;
+height: 420px;
+border-radius: 100%;
+align-items: center;
+
+z-index: -10;
+position: absolute;
+
+& .img {
+  width: 100%;
+
+}
+
+
+& .bolinhas {
+position: absolute;
+left: 0px;
+z-index: -20;
+
+}
+
+}
+
+
+}
+
+
+
+
+.servicos-section {
+
+padding: 64px 0px;
+
+& .bolinhas {
+  width: 270px;
+  height: 48px;
+}
+& h2 {
+  color: var(--3, #664E38);
+text-align: center;
+font-family: "Source Serif 4";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+}
+
+& article {
+  width: 40%;
+  margin-right: 32px;
+}
+
+& article p {
+text-align: center;
+
+}
+
+& [role="mask"] {
+  width: 160px;
+height: 320px;
+flex-shrink: 0;
+border-radius: 0px 8px 8px 0px;
+}
+
+& [role="mask"] img {
+height: 140%;
+transform: scalex(-1);
+}
+
+}
+
+
+
+.bolinhas {
+  width: 300px;
+height: 300px;
+
+
+background-color: var(--tom3);
+mask: url("public/bolinhas.svg") no-repeat center;
+mask-size: 100%;
+
+&.fileira {
+mask: url("public/fileira-de-bolinhas.svg") no-repeat center;
+mask-size: 100%;
+}
+
+
+}
+
+
+
+
+
+/* *********** */
+/* UTILITÁRIOS */
+/* *********** */
+
+.translate-y-center {
+  translate: 0 -50%;
+  top: 50%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-1 {
+  gap: 4px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
