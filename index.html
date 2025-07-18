@@ -7,6 +7,9 @@
     <!-- Minha folha de estilo -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia vanguarda</title>
@@ -18,6 +21,7 @@
           <h1>Barbearia <span> Vanguarda </span></h1>
           <div role="logo" class="logo-hero"></div>
         </header>
+
         <!--role=papel/função-->
         <div id="hero-slider" role="mask">
           <img
@@ -70,16 +74,54 @@
     <!-- ------------- -->
     <!-- SEÇÃO CONTATO -->
     <!-- ------------- -->
-    <section class="contato-section"></section>
-    <h1>Entre em contato conosco</h1>
+    <section class="contato-section justify-between">
+      <h1>Entre em contato conosco</h1>
+      <div role="mask" class="justify-center">
+        <video src="public/video-contato.webm" autoplay muted loop></video>
+      </div>
+
+      <div class="buttons-spacer flex flex-col gap-2">
+        <a href="mailto:heloisa.cbarbosa1@senacsp.edu.br">
+          <i data-feather="mail"></i>
+          Nos envie um email
+        </a>
+        <a
+          class="whatsapp-link"
+          href="https://wa.me/5511932556890?text=%20Ol%C3%A1!%20Em%20que%20posso%20ajudar?"
+        >
+          <div class="whatsapp-icon"></div>
+          Fale conosco
+        </a>
+      </div>
+    </section>
+
+    <!-- ------------- -->
+    <!-- SEÇÃO UNIDADES -->
+    <!-- ------------- -->
+    <section class="unidades-section">
+
+<p>
+  Nossa sede, localizada na zona leste de São Paulo, e as demais unidades, estão abertas todos os dias. <br> <br> Confira os horários específicos de cada unidade.
+</p>
+
+<div class="map">
+ <div class="map-mask">
+ <img src="public/mapa-1.jpg" alt=" imagem da unidade 1">
+ </div>
+ <address class="flex flex-col gap-1">
+  <h2>Av. Marechal Tito 1500</h2>
+  <h3>São Miguel Paulista, São paulo</h3>
+ </address>
+
+</div>
 
 
-<video src="public/video-contato.webm" autoplay muted loop> </video>
+    </section>
 
 
-<a href="mailto:heloisa.cbarbosa1@senacsp.edu.br">Nos envie um email</a>
- <a href="https://wa.me/5511932556890?text=%20Ol%C3%A1!%20Em%20que%20posso%20ajudar?">Fale conosco</a>
 
-</section>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

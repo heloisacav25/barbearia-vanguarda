@@ -120,115 +120,196 @@ p {
   opacity: 0.65;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .a-barbearia-section {
+  & [role-mask] {
+    width: 420px;
+    height: 420px;
+    border-radius: 100%;
+    align-items: center;
 
-& [role-mask] {
-width: 420px;
-height: 420px;
-border-radius: 100%;
-align-items: center;
+    z-index: -10;
+    position: absolute;
 
-z-index: -10;
-position: absolute;
+    & .img {
+      width: 100%;
+    }
 
-& .img {
-  width: 100%;
-
+    & .bolinhas {
+      position: absolute;
+      left: 0px;
+      z-index: -20;
+    }
+  }
 }
 
+.contato-section {
+  padding: 64px 16px;
 
-& .bolinhas {
-position: absolute;
-left: 0px;
-z-index: -20;
+  & h1 {
+    margin: 0px 16px;
+  }
 
+  & .buttons-spacer {
+    margin: 0px 16px;
+  }
+
+  & a {
+    width: 100%;
+  }
+
+  & .whatsapp-link {
+    background-color: color-mix(in srgb, #128c7e 100%, white 20%);
+    color: var(--tom1);
+  }
 }
-
-}
-
-
-}
-
-
-
 
 .servicos-section {
+  padding: 64px 0px;
 
-padding: 64px 0px;
+  & .bolinhas {
+    width: 270px;
+    height: 48px;
+  }
+  & h2 {
+    color: var(--3, #664e38);
+    text-align: center;
+    font-family: "Source Serif 4";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 20px */
+  }
 
-& .bolinhas {
-  width: 270px;
-  height: 48px;
-}
-& h2 {
-  color: var(--3, #664E38);
-text-align: center;
-font-family: "Source Serif 4";
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%; /* 20px */
-}
+  & article {
+    width: 40%;
+    margin-right: 32px;
+  }
 
-& article {
-  width: 40%;
-  margin-right: 32px;
-}
+  & article p {
+    text-align: center;
+  }
 
-& article p {
-text-align: center;
+  & [role="mask"] {
+    width: 160px;
+    height: 320px;
+    flex-shrink: 0;
+    border-radius: 0px 8px 8px 0px;
+  }
 
-}
-
-& [role="mask"] {
-  width: 160px;
-height: 320px;
-flex-shrink: 0;
-border-radius: 0px 8px 8px 0px;
-}
-
-& [role="mask"] img {
-height: 140%;
-transform: scalex(-1);
-}
-
+  & [role="mask"] img {
+    height: 140%;
+    transform: scalex(-1);
+  }
 }
 
+/* *********** */
+/* BOTAO */
+/* *********** */
+a,
+button {
+  /* layout */
+  width: fit-content;
+  display: inline-flex;
+  padding: 8px 24px;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 
+  /* Estilo */
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--tom2), white 20%);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+  /* tipografia */
+  color: var(--tom3, #664e38);
+  font-family: Exo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition: all 150ms;
+
+  &:hover {
+    background: color-mix(in srgb, var(--tom2) 100%, black 20%);
+    color: var(--tom1);
+  }
+
+  &:active {
+    background: color-mix(in srgb, var(--tom2) 100%, white 40%);
+  }
+}
 
 .bolinhas {
   width: 300px;
-height: 300px;
+  height: 300px;
 
+  background-color: var(--tom3);
+  mask: url("public/bolinhas.svg") no-repeat center;
+  mask-size: 100%;
 
-background-color: var(--tom3);
-mask: url("public/bolinhas.svg") no-repeat center;
-mask-size: 100%;
-
-&.fileira {
-mask: url("public/fileira-de-bolinhas.svg") no-repeat center;
-mask-size: 100%;
+  &.fileira {
+    mask: url("public/fileira-de-bolinhas.svg") no-repeat center;
+    mask-size: 100%;
+  }
 }
 
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
 
+  background-color: currentColor;
+  mask: url("public/whatsapp.svg") no-repeat center;
+  mask-size: 100%;
 }
 
+.map {
+width: fit-content;
+background-color: var(--secundaria);
+border-radius: 8px;
+/* espessura estilo cor */
+border: 4px solid var(--secundaria);
+overflow: hidden;
 
+  & .map-mask {
+    width: 272px;
+    height: 156px;
 
+    overflow: hidden;
 
+    & img {
+      width: 100%;
+    }
+  }
+
+ & address {
+  padding: 8px;
+ }
+  & h2 {
+    margin: 0;
+    color: #fff;
+    font-family: Exo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+  }
+
+  & h3 {
+    margin: 0;
+    color: #fff;
+    font-family: Exo;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 108%; /* 8.64px */
+    letter-spacing: -0.64px;
+  }
+}
 
 /* *********** */
 /* UTILITÁRIOS */
