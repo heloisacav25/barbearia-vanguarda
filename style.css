@@ -47,10 +47,6 @@ span {
   font-weight: 800;
 }
 
-img {
-  height: 100%;
-}
-
 .logo-hero {
   position: absolute;
 
@@ -121,24 +117,51 @@ p {
 }
 
 .a-barbearia-section {
-  & [role-mask] {
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  & .card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 8px 12px 0px 0px;
+
+    border-top: 3px;
+    border-right: 3px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+
+    background-color: var(--tom1);
+
+    border-image-source: linear-gradient(30deg, var(--tom1) var(--tom3));
+    border-image-slice: 1;
+
+    & p {
+      margin: 0;
+    }
+  }
+  & [role="mask"] {
     width: 420px;
     height: 420px;
     border-radius: 100%;
     align-items: center;
+    
 
     z-index: -10;
     position: absolute;
 
-    & .img {
+    & img {
       width: 100%;
+      
     }
-
-    & .bolinhas {
-      position: absolute;
-      left: 0px;
-      z-index: -20;
-    }
+  }
+  & .bolinhas {
+    position: absolute;
+    left: 0px;
+    z-index: -20;
   }
 }
 
@@ -268,12 +291,12 @@ button {
 }
 
 .map {
-width: fit-content;
-background-color: var(--secundaria);
-border-radius: 8px;
-/* espessura estilo cor */
-border: 4px solid var(--secundaria);
-overflow: hidden;
+  width: fit-content;
+  background-color: var(--secundaria);
+  border-radius: 8px;
+  /* espessura estilo cor */
+  border: 4px solid var(--secundaria);
+  overflow: hidden;
 
   & .map-mask {
     width: 272px;
@@ -286,9 +309,9 @@ overflow: hidden;
     }
   }
 
- & address {
-  padding: 8px;
- }
+  & address {
+    padding: 8px;
+  }
   & h2 {
     margin: 0;
     color: #fff;
