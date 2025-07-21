@@ -59,7 +59,7 @@ span {
 /* ********** */
 
 /* seção */
-section {
+section, dialog { 
   width: 100%;
 
   /* Smallest View port */
@@ -367,6 +367,28 @@ footer {
   & a:hover {
     color: var(--tom1);
   }
+}
+
+dialog {
+  color: #FFF;
+font-family: Exo;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 16px */
+
+& [role="logo"] {
+  width: 96px;
+  height: 96px;
+}
+
+& a, svg {
+  color: black;
+text-decoration: none;
+}
+& nav {
+  text-align: right;
+}
 }
 
 /* *********** */
