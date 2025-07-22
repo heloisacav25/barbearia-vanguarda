@@ -10,12 +10,14 @@
     <!-- Feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!-- swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbearia vanguarda</title>
   </head>
   <body>
-
     <dialog class="justify-between">
       <div role="logo"></div>
       <nav class="flex flex-col gap-4">
@@ -60,7 +62,7 @@
 
     <nav class="main flex justify-between items-center">
       <div role="logo"></div>
-      <i  onclick="menu.showModal()" data-feather="menu"></i>
+      <i onclick="menu.showModal()" data-feather="menu"></i>
     </nav>
 
     <!-- ***************** -->
@@ -75,10 +77,19 @@
 
         <!--role=papel/função-->
         <div id="hero-slider" role="mask">
-          <img
-            src="public/5bf49a429fa3144716f1ec4955d31e2913a6abd9 (4).jpg"
-            alt="slide-1"
-          />
+
+          <swiper-container autoplay speed="3000">
+            <swiper-slide>
+              <img src="public/slide-1.jpg" alt="slide-1" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="public/slide-2.jpg" alt="slide-2" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="public/slide-3.jpg" alt="slide-3" />
+            </swiper-slide>
+          </swiper-container>
+
         </div>
       </div>
       <p class="hero-paragraph">
@@ -203,12 +214,10 @@
       </div>
     </footer>
 
-
-
     <script>
       feather.replace();
-// const = constante
-// menu = nome da variavel
+      // const = constante
+      // menu = nome da variavel
       const menu = document.querySelector("dialog");
     </script>
   </body>
