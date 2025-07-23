@@ -77,7 +77,6 @@
 
         <!--role=papel/função-->
         <div id="hero-slider" role="mask">
-
           <swiper-container autoplay speed="3000">
             <swiper-slide>
               <img src="public/slide-1.jpg" alt="slide-1" />
@@ -89,7 +88,6 @@
               <img src="public/slide-3.jpg" alt="slide-3" />
             </swiper-slide>
           </swiper-container>
-
         </div>
       </div>
       <p class="hero-paragraph">
@@ -177,7 +175,7 @@
     <!-- ------------- -->
     <!-- SEÇÃO UNIDADES -->
     <!-- ------------- -->
-    <section class="unidades-section">
+    <section class="unidades-section gap-8">
       <p>
         Nossa sede, localizada na zona leste de São Paulo, e as demais unidades,
         estão abertas todos os dias. <br />
@@ -185,15 +183,43 @@
         Confira os horários específicos de cada unidade.
       </p>
 
-      <div class="map">
-        <div class="map-mask">
-          <img src="public/mapa-1.jpg" alt=" imagem da unidade 1" />
-        </div>
-        <address class="flex flex-col gap-1">
-          <h2>Av. Marechal Tito 1500</h2>
-          <h3>São Miguel Paulista, São paulo</h3>
-        </address>
-      </div>
+      <swiper-container space-between="-96px" rewind>
+        <swiper-slide>
+          <div class="map">
+            <div class="map-mask">
+              <img src="public/mapa-1.jpg" alt="imagem da unidade 1" />
+            </div>
+            <address class="flex flex-col gap-1">
+              <h2>Av. Marechal Tito 1500</h2>
+              <h3>São Miguel Paulista, São paulo</h3>
+            </address>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="map">
+            <div class="map-mask">
+              <img src="public/unidade-2.jpg" alt=" imagem da unidade 2" />
+            </div>
+            <address class="flex flex-col gap-1">
+              <h2>Av. Marechal Tito 1500</h2>
+              <h3>São Miguel Paulista, São paulo</h3>
+            </address>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="map">
+            <div class="map-mask">
+              <img src="public/unidade-3.jpg" alt=" imagem da unidade 3" />
+            </div>
+            <address class="flex flex-col gap-1">
+              <h2>Av. Marechal Tito 1500</h2>
+              <h3>São Miguel Paulista, São paulo</h3>
+            </address>
+          </div>
+        </swiper-slide>
+      </swiper-container>
     </section>
 
     <footer>

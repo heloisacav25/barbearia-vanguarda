@@ -448,6 +448,27 @@ swiper-container {
   height: 100%;
 }
 
+swiper-slide {
+  transition: transform 500ms;
+}
+
+.unidades-section {
+  height: fit-content;
+  padding: 64px 0;
+
+  & .map {
+    margin: auto;
+  }
+
+  & p {
+    margin: 0 32px;
+  }
+
+  & swiper-slide:not(.swiper-slide-active) {
+    transform: scale(0.9);
+  }
+}
+
 /* *********** */
 /* UTILITÁRIOS */
 /* *********** */
