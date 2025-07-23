@@ -18,10 +18,27 @@
   justify-content: space-around;
   padding: 64px 16px;
 
-span {
-  color: var(--tom3);
-  font-weight: 800;
-}
+  span {
+    color: var(--tom3);
+    font-weight: 800;
+  }
+
+  & img {
+    height: 100%;
+  }
+
+  @media (min-width: 708px) {
+    padding: 64px;
+
+    & #hero-slider {
+      height: 380px;
+    }
+
+    & img {
+      height: initial;
+      width: 100%;
+    }
+  }
 
   & .hero-paragraph {
     width: 272px;
@@ -45,9 +62,8 @@ span {
 
 #hero-slider {
   margin-top: 16px;
+  box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
 }
-
-
 
 .logo-hero {
   position: absolute;
@@ -61,7 +77,8 @@ span {
 /* ********** */
 
 /* seção */
-section, dialog { 
+section,
+dialog {
   width: 100%;
 
   /* Smallest View port */
@@ -138,7 +155,7 @@ p {
 
     background-color: var(--tom1);
 
-    border-image-source: linear-gradient(30deg, var(--tom1) var(--tom3));
+    border-image-source: linear-gradient(30deg, var(--tom1) 60%, var(--tom3) 100%);
     border-image-slice: 1;
 
     & p {
@@ -150,7 +167,7 @@ p {
     height: 420px;
     border-radius: 100%;
     align-items: center;
-
+    box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
     z-index: -10;
     position: absolute;
 
@@ -160,13 +177,17 @@ p {
   }
   & .bolinhas {
     position: absolute;
-    left: 0px;
+    left: -50px;
     z-index: -20;
   }
 }
 
 .contato-section {
   padding: 64px 16px;
+
+  & .justify-center {
+    box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
+  }
 
   & h1 {
     margin: 0px 16px;
@@ -217,6 +238,7 @@ p {
     height: 320px;
     flex-shrink: 0;
     border-radius: 0px 8px 8px 0px;
+    box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
   }
 
   & [role="mask"] img {
@@ -270,6 +292,7 @@ button {
 .bolinhas {
   width: 300px;
   height: 300px;
+  margin-left: 50px;
 
   background-color: var(--tom3);
   mask: url("public/bolinhas.svg") no-repeat center;
@@ -353,7 +376,8 @@ footer {
     background-color: color-mix(in srgb, var(--tom3) 100%, black 40%);
   }
 
-  & p, a{
+  & p,
+  a {
     color: #fff;
     font-family: Exo;
     font-size: 8px;
@@ -372,71 +396,69 @@ footer {
 }
 
 dialog {
-  color: #FFF;
-font-family: Exo;
-font-size: 32px;
-font-style: normal;
-font-weight: 500;
-line-height: 100%; /* 16px */
+  color: #fff;
+  font-family: Exo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 16px */
 
-max-width: 100%;
-max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 
-margin: 0;
-border: 0;
-background-color: rgba(0, 0, 0, 0.40);
-position: fixed;
-top: 0;
+  margin: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
 
-opacity: 0;
-transition: all 300ms allow-discrete;
+  opacity: 0;
+  transition: all 300ms allow-discrete;
 
-&[open] {
-  opacity: 1;
+  &[open] {
+    opacity: 1;
 
-  @starting-style {
-    opacity: 0;
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  & [role="logo"] {
+    width: 96px;
+    height: 96px;
+    background-color: white;
+  }
+
+  & a,
+  svg {
+    color: white;
+    text-decoration: none;
+  }
+  & nav {
+    text-align: right;
   }
 }
 
-& [role="logo"] {
-  width: 96px;
-  height: 96px;
-  background-color: white;
-}
-
-& a, svg {
-  color: white;
-text-decoration: none;
-}
-& nav {
-  text-align: right;
-}
-}
-
 nav.main {
-
   width: 100%;
   padding: 24px 32px;
   position: fixed;
   top: 0;
   z-index: 100;
   mix-blend-mode: difference;
-  
+
   transition: margin-top 1s;
 
-& [role="logo"] {
-  width: 48px;
-  height: 48px;
-  background-color: white;
-}
+  & [role="logo"] {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+  }
 
-& svg {
-  color: white;
+  & svg {
+    color: white;
+  }
 }
-
-}
-
 
 dialog[open] + nav.main {
   margin-top: -96px;
@@ -449,6 +471,10 @@ swiper-container {
 }
 
 swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   transition: transform 500ms;
 }
 
